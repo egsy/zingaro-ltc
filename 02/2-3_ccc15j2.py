@@ -7,11 +7,11 @@ message = input(str())
 happy_count = message.count(HAPPY)
 sad_count = message.count(SAD)
 
-if not (HAPPY or SAD) in message:
-    print("none")
-elif happy_count == sad_count and :
+if happy_count == sad_count and (happy_count and sad_count > 0):
     print("unsure")
 elif happy_count > sad_count:
     print("happy")
-else:
+elif happy_count < sad_count:
     print("sad")
+else:
+    print("none")
