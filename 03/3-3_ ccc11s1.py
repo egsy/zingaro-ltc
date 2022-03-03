@@ -1,9 +1,6 @@
 # https://dmoj.ca/problem/ccc11s1
 # write program that distinguishes English text from French text
 
-from black import out
-
-
 ENGLISH = "English"
 FRENCH = "French"
 
@@ -12,11 +9,14 @@ s_count = 0
 t_count = 0
 text = ""
 for i in range(lines):
-
     text = text + str(input())
-print(text)
 
-for char in text:
-    if char == "t":
-        t_count = t_count + 1
-print(t_count)
+t_count = text.count("t") + text.count("T")
+s_count = text.count("s") + text.count("S")
+
+if t_count > s_count:
+    print(ENGLISH)
+elif s_count > t_count:
+    print(FRENCH)
+elif t_count == s_count:
+    print(FRENCH)
