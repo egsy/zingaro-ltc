@@ -14,11 +14,11 @@ p = int(input())  # population
 n = int(input())  # number infected on day 0
 r = int(input())  # reproduction number
 day = 0
-infected = []
+infected = n
 
-while sum(infected) < p:
+while n <= p:
+    n = n + infected * r
+    infected = infected * r
     day += 1
-    n = n * r
-    infected.append(n)
 
 print(day)
