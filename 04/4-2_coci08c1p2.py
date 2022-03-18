@@ -15,12 +15,20 @@ if len(ADRIAN) < num:
     BRUNO = BRUNO * (num // len(BRUNO)) + BRUNO[: (num % len(BRUNO))]
     GORAN = GORAN * (num // len(GORAN)) + GORAN[: (num % len(GORAN))]
 
-# compare answer sequences with given key
-j = 0
+# compare answer sequences with given key and count correct answers for each
+adrian_count = 0
+bruno_count = 0
+goran_count = 0
 i = 0
-while i <= num:
-    print(key[i])
+while i < num:
     if key[i] == ADRIAN[i]:
-        print("adrian match")
+        adrian_count += 1
+    if key[i] == BRUNO[i]:
+        bruno_count += 1
+    if key[i] == GORAN[i]:
+        goran_count += 1
 
     i += 1
+
+# compare correct counts and prepare output
+most = adrian_count
