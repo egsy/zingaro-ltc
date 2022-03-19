@@ -32,3 +32,15 @@ while i < num:
 
 # compare correct counts and prepare output
 most = adrian_count
+if bruno_count > most:
+    most = bruno_count
+if goran_count > most:
+    most = goran_count
+
+print(most)
+if adrian_count == most:
+    print("Adrian")
+if bruno_count == most:
+    print("Bruno")
+if goran_count == most:
+    print("Goran")
