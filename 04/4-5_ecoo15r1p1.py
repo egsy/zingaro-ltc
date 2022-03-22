@@ -1,22 +1,22 @@
 # DMOJ problem ecoo15r1p1, When You Eat Your Smarties
 
-red = 0
-orange = 0
-blue = 0
-green = 0
-yellow = 0
-pink = 0
-violet = 0
-brown = 0
-color = ""
-i = 0
-handful = 0
+for testcase in range(10):
+    red = 0
+    orange = 0
+    blue = 0
+    green = 0
+    yellow = 0
+    pink = 0
+    violet = 0
+    brown = 0
+    color = ""
+    handful = 0
 
+    next = True
 
-for i in range(10):
-    print(i)
-    color = str(input())
-    while color is True:
+    print("test:", testcase)
+    while next is True:
+        color = str(input())
         if color == "red":
             red += 1
         elif color == "orange":
@@ -33,12 +33,13 @@ for i in range(10):
             violet += 1
         elif color == "brown":
             brown += 1
+        elif color == "end of box":
+            next = False
 
-        groups = [red, orange, blue, green, yellow, pink, violet, brown]
-        # for x in range(groups):
-        #     if x % 7 == 0
-        if color == "end of box":
-            # do math, output seconds
-            # print(handful)
-            i += 1
-            print(groups)
+    groups = [red, orange, blue, green, yellow, pink, violet, brown]
+    # for x in range(groups):
+    #     if x % 7 == 0
+    # do math, output seconds
+    # print(handful)
+    print(groups)
+    testcase += 1
