@@ -11,10 +11,10 @@ for testcase in range(10):
     brown = 0
     color = ""
     handful = 0
+    seconds = 0
 
     next = True
 
-    print("test:", testcase)
     while next is True:
         color = str(input())
         if color == "red":
@@ -36,10 +36,15 @@ for testcase in range(10):
         elif color == "end of box":
             next = False
 
-    groups = [red, orange, blue, green, yellow, pink, violet, brown]
-    # for x in range(groups):
-    #     if x % 7 == 0
-    # do math, output seconds
-    # print(handful)
-    print(groups)
+    groups = [orange, blue, green, yellow, pink, violet, brown]
+
+    for x in groups:
+        # do math, output seconds
+        # if remainder exists, add 1 to integer division
+        if x % 7 != 0:
+            handful += x // 7 + 1
+        else:
+            handful += x // 7
+    seconds = (handful * 13) + (red * 16)
+    print(seconds)
     testcase += 1
