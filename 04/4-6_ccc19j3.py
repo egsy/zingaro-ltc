@@ -3,10 +3,12 @@
 
 num = int(input())
 i = 0
-output = "{} {}"
+output = "{} {} "
+encoding = ""
 
 for line in range(num):
     text = str(input())
+    print(text, type(text))
     while i < len(text):
         # count how many times character at index `i` appears
         count = 1
@@ -14,6 +16,10 @@ for line in range(num):
         while i + 1 < len(text) and text[i] == text[i + 1]:
             count += 1
             i += 1
-        print(output.format(count, text[i]))
+        encoding += output.format(count, text[i])
+        print(encoding)
         i += 1
+    print(encoding[:-1])
+
     line += 1
+    encoding = ""
