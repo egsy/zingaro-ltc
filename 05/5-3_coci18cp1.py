@@ -15,7 +15,7 @@ turnaround = [False]
 score = [0, 0]
 lead = ""
 prev_lead = ""
-for sec in range(0, 2881):
+for sec in range(0, 2880):
     prev_lead = lead
     if As.count(sec) == 1:
         score[0] += 1
