@@ -10,16 +10,6 @@ Bs = []
 for num in range(B):
     Bs.append(int(input()))
 
-# calculate how many points scored in first half-time
-# game lasts 4x12 min, so half game = 24 min = 1440 sec
-points = 0
-for sec in range(0, 1441):
-    if As.count(sec) == 1:
-        points += 1
-    if Bs.count(sec) == 1:
-        points += 1
-print(points)
-
 # count turnarounds in the match
 turnaround = [False]
 score = [0, 0]
@@ -31,6 +21,10 @@ for sec in range(0, 2881):
         score[0] += 1
     if Bs.count(sec) == 1:
         score[1] += 1
+    # # calculate how many points scored in first half-time
+    # # game lasts 4x12 min, so half game = 24 min = 1440 sec
+    if sec == 1440:
+        print(sum(score))
 
     if score[0] != 1 and score[0] > score[1]:
         lead = "A"
@@ -40,5 +34,4 @@ for sec in range(0, 2881):
     if lead != prev_lead:
         turnaround.append(True)
 
-        print(score, "lead: ", lead)
-        print(turnaround, turnaround.count(True))
+print(turnaround.count(True))
