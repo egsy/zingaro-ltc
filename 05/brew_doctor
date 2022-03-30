@@ -1,0 +1,116 @@
+[1mPlease note that these warnings are just used to help the Homebrew maintainers
+with debugging if you file an issue. If everything you use Homebrew for is
+working fine: please don't worry or file an issue; just ignore this. Thanks![0m
+
+Warning: Your Command Line Tools are too outdated.
+Update them from Software Update in System Preferences or run:
+  softwareupdate --all --install --force
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  [4mhttps://developer.apple.com/download/all/[24m.
+You should download the Command Line Tools for Xcode 13.3.
+
+
+Warning: A newer Command Line Tools release is available.
+Update them from Software Update in System Preferences or run:
+  softwareupdate --all --install --force
+
+If that doesn't show you any updates, run:
+  sudo rm -rf /Library/Developer/CommandLineTools
+  sudo xcode-select --install
+
+Alternatively, manually download them from:
+  [4mhttps://developer.apple.com/download/all/[24m.
+You should download the Command Line Tools for Xcode 13.3.
+
+
+Warning: You have the following deprecated, cask taps tapped:
+  caskroom/fonts
+Untap them with `brew untap`.
+
+Warning: Some installed formulae are deprecated or disabled.
+You should find replacements for the following formulae:
+  dep
+  ilmbase
+  postgresql@9.4
+
+Warning: The following directories do not exist:
+/usr/local/sbin
+
+You should create these directories and change their ownership to your user.
+  sudo mkdir -p /usr/local/sbin
+  sudo chown -R $(whoami) /usr/local/sbin
+
+Warning: Unbrewed dylibs were found in /usr/local/lib.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected dylibs:
+  /usr/local/lib/libwkhtmltox.0.12.6.dylib
+
+Warning: Unbrewed header files were found in /usr/local/include.
+If you didn't put them there on purpose they could cause problems when
+building Homebrew formulae, and may need to be deleted.
+
+Unexpected header files:
+  /usr/local/include/node/android-ifaddrs.h
+  /usr/local/include/node/ares.h
+  /usr/local/include/node/ares_build.h
+  /usr/local/include/node/ares_rules.h
+  /usr/local/include/node/ares_version.h
+  /usr/local/include/node/nameser.h
+  /usr/local/include/node/openssl/archs/BSD-x86/opensslconf.h
+  /usr/local/include/node/openssl/archs/BSD-x86_64/opensslconf.h
+  /usr/local/include/node/openssl/archs/VC-WIN32/opensslconf.h
+  /usr/local/include/node/openssl/archs/VC-WIN64A/opensslconf.h
+  /usr/local/include/node/openssl/archs/aix-gcc/opensslconf.h
+  /usr/local/include/node/openssl/archs/aix64-gcc/opensslconf.h
+  /usr/local/include/node/openssl/archs/darwin-i386-cc/opensslconf.h
+  /usr/local/include/node/openssl/archs/darwin64-x86_64-cc/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-aarch64/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-armv4/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-elf/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-ppc/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-ppc64/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-x32/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux-x86_64/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux32-s390x/opensslconf.h
+  /usr/local/include/node/openssl/archs/linux64-s390x/opensslconf.h
+  /usr/local/include/node/openssl/archs/solaris-x86-gcc/opensslconf.h
+  /usr/local/include/node/openssl/archs/solaris64-x86_64-gcc/opensslconf.h
+  /usr/local/include/node/openssl/des_old.h
+  /usr/local/include/node/openssl/dso.h
+  /usr/local/include/node/openssl/krb5_asn.h
+  /usr/local/include/node/openssl/kssl.h
+  /usr/local/include/node/openssl/pqueue.h
+  /usr/local/include/node/openssl/ssl23.h
+  /usr/local/include/node/openssl/ui_compat.h
+  /usr/local/include/node/pthread-barrier.h
+  /usr/local/include/node/stdint-msvc2008.h
+  /usr/local/include/node/tree.h
+  /usr/local/include/node/uv-aix.h
+  /usr/local/include/node/uv-bsd.h
+  /usr/local/include/node/uv-darwin.h
+  /usr/local/include/node/uv-errno.h
+  /usr/local/include/node/uv-linux.h
+  /usr/local/include/node/uv-os390.h
+  /usr/local/include/node/uv-sunos.h
+  /usr/local/include/node/uv-threadpool.h
+  /usr/local/include/node/uv-unix.h
+  /usr/local/include/node/uv-version.h
+  /usr/local/include/node/uv-win.h
+  /usr/local/include/node/v8-debug.h
+  /usr/local/include/node/v8-experimental.h
+  /usr/local/include/wkhtmltox/image.h
+  /usr/local/include/wkhtmltox/pdf.h
+
+Warning: You have unlinked kegs in your Cellar.
+Leaving kegs unlinked can lead to build-trouble and cause formulae that depend on
+those kegs to fail to run properly once built. Run `brew link` on these:
+  mono
+  node
+  unbound
